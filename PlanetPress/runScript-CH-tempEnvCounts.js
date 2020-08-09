@@ -4,8 +4,8 @@ myPDF.Open(Watch.GetJobFileName(), false);
 
 pgcnt=myPDF.Pages().Count();
 
-var varName = '';
-varName ="_" + (pgcnt/2) + "page";
+var localPPvarName = '';
+localPPvarName =`_${pgcnt / 2}page`;
 
-Watch.SetVariable(varName, parseInt(Watch.GetVariable(varName)) + 1);
+Watch.SetVariable(localPPvarName, parseInt(Watch.GetVariable(localPPvarName)) + 1);
 myPDF.Close();
