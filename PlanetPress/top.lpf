@@ -1,0 +1,9 @@
+#Australia Post Visa Tray Label System - Ver:
+3v0-700
+#Label Plan File
+
+#Label Plan Header
+,,,4,,
+
+#Label Details
+#Service,Sort_Plan_Type,Sort_Plan,Mail_Size,Label_Qty,Date

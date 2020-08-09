@@ -1,0 +1,108 @@
+                 MANIFEST FOR BARCODED PRESORT LETTER LODGEMENT
+--------------------------------------------------------------------------------
+Customer Name: CHC                              Letters/Tray: 300  Job No: 99999
+--------------------------------------------------------------------------------
+State: Northern Territory
+Sort Level: Barcoded - Residue Trays
+                                                  Volume       Trays
+                                                  ------       -----
+                                                       1           1
+                                                  ------       -----
+Summary - NT
+Barcoded                                               1           1
+Unbarcoded                                             0           0
+                                                  ------       -----
+Total - NT                                             1           1
+--------------------------------------------------------------------------------
+State: New South Wales
+Sort Level: Barcoded - Direct Trays
+                                   Sort Plan
+                                      Number      Volume       Trays
+                                      ------      ------       -----
+                                         004         463           2
+                                         007         455           2
+                                         012         305           2
+                                      ------      ------       -----
+Sub-total                                           1223           6
+Sort Level: Barcoded - Residue Trays
+                                                    1372           5
+Sort Level: Unbarcoded - Residue Trays
+                                                      94           1
+                                                  ------       -----
+Summary - NSW
+Barcoded                                            2595          11
+Unbarcoded                                            94           1
+                                                  ------       -----
+Total - NSW                                         2689          12
+--------------------------------------------------------------------------------
+State: Australian Capital Territories
+Sort Level: Barcoded - Residue Trays
+                                                  Volume       Trays
+                                                  ------       -----
+                                                     224           1
+Sort Level: Unbarcoded - Residue Trays
+                                                      12           1
+                                                  ------       -----
+Summary - ACT
+Barcoded                                             224           1
+Unbarcoded                                            12           1
+                                                  ------       -----
+Total - ACT                                          236           2
+--------------------------------------------------------------------------------
+State: Victoria
+Sort Level: Barcoded - Residue Trays
+                                                  Volume       Trays
+                                                  ------       -----
+                                                       5           1
+Sort Level: Unbarcoded - Residue Trays
+                                                       1           1
+                                                  ------       -----
+Summary - VIC
+Barcoded                                               5           1
+Unbarcoded                                             1           1
+                                                  ------       -----
+Total - VIC                                            6           2
+--------------------------------------------------------------------------------
+State: Queensland
+Sort Level: Barcoded - Residue Trays
+                                                  Volume       Trays
+                                                  ------       -----
+                                                      14           1
+                                                  ------       -----
+Summary - QLD
+Barcoded                                              14           1
+Unbarcoded                                             0           0
+                                                  ------       -----
+Total - QLD                                           14           1
+--------------------------------------------------------------------------------
+Summary - All States
+                                  ----- Same State -----  ---- Other States ----
+                                      Volume       Trays      Volume       Trays
+                                      ------       -----      ------       -----
+Barcoded
+   Direct Trays                                                 1223           6
+   Residue Trays                          14           1        1602           8
+                                      ------       -----      ------       -----
+   Sub-total                              14           1        2825          14
+Unbarcoded                                                       107           3
+                                      ------       -----      ------       -----
+Total                                     14           1        2932          17
+--------------------------------------------------------------------------------
+Mailing Total
+                                      Volume       Trays    % Volume
+                                      ------       -----    --------
+Barcoded
+   Direct Trays                         1223           6       41.5%
+   Residue Trays                        1616           9       54.9%
+                                       -----      ------       -----
+   Sub-total                            2839          15       96.4%
+Unbarcoded                               107           3        3.6%
+                                       -----      ------       -----
+Total                                   2946          18      100.0%
+--------------------------------------------------------------------------------
+Assumptions
+State of Lodgement:     QLD
+Article Size:           Small
+Article Dimensions:     130mm wide * 240mm high * 5mm thick
+Article Average Weight: 15 grams
+--------------------------------------------------------------------------------
