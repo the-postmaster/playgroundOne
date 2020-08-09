@@ -79,18 +79,24 @@ let objFile = filesys.OpenTextFile(manifestFile, 1);
 
 skipLine(6); //get to the first state
 
-let arrSortPlans = ['',''];
+let arrSortPlans = [];
 
 while (!objFile.AtEndOfStream()) {
     let inside = false;
     let strLine = objFile.ReadLine();
+    if (inside){
+        arrSortPlans.push(strLine);
+    } 
     if (strLine === '                                   Sort Plan') {
         inside = true;
         objFile.SkipLine();
         objFile.SkipLine();
-    } else if (strLine === '                                      ------      ------       -----') {
+    }
+    
+    if (strLine === '                                      ------      ------       -----') {
         inside = false;
     }
+    
 
 }
 
