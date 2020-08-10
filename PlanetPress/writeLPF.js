@@ -1,4 +1,4 @@
-/* 
+/*
 VBScript code
 
 dim filesys
@@ -62,47 +62,44 @@ Function nextLine (ll)
     nextLine = thisLine
 end function
  */
-let findStart = 'Sort Plan';
-let findStop ='';
-const manifest = Watch.GetVariable('Manifest_Name'); //"Watch" is PlanetPress Workflow's automation object
-const hfile = 'C:\\Catholic Healthcare\\Header FIles\\top.lpf'; //Label header file
-const newfile = `C:\\Catholic HealthcarePrint Output\\${manifest.replace('MANIFEST','LABEL')}.lpf`; //new label file
-const manifestFile =  `C:\\Catholic HealthcarePrint Output\\${manifest}.txt`; //manifest file output location
+var findStart = 'Sort Plan';
+var findStop ='';
+var manifest = '20200809_CHC_MANIFEST'; //"Watch" is PlanetPress Workflow's automation object
+var hfile = 'C:\\Catholic Healthcare\\Header FIles\\top.lpf'; //Label header file
+var newfile = "C:\\CHC-TEST\\" + manifest.replace("MANIFEST","LABEL") + ".lpf"; //new label file
+var manifestFile =  'C:\\CHC-TEST\\'+manifest+'.txt'; //manifest file output location
 
 //copy header file to output folder and rename
-const filesys = new ActiveXObject('Scripting.FileSystemObject');
-let copyHFile = filesys.CopyFile(hfile, newfile);
+var filesys = new ActiveXObject('Scripting.FileSystemObject');
+var copyHFile = filesys.CopyFile(hfile, newfile);
 copyHFile= undefined;
 
 //open manifest file and read contents
-let objFile = filesys.OpenTextFile(manifestFile, 1);
+var iStream = filesys.OpenTextFile(manifestFile, 1);
 
-skipLine(6); //get to the first state
 
-let arrSortPlans = [];
+var arrSortPlans = [];
+var inside = false;
+var foundEnd = false;
+while (!iStream.AtEndOfStream) {
 
-while (!objFile.AtEndOfStream()) {
-    let inside = false;
-    let strLine = objFile.ReadLine();
+    var strLine = iStream.ReadLine();
     if (inside){
         arrSortPlans.push(strLine);
-    } 
+    }
     if (strLine === '                                   Sort Plan') {
         inside = true;
-        objFile.SkipLine();
-        objFile.SkipLine();
+        iStream.SkipLine();
+        iStream.SkipLine();
     }
-    
+
     if (strLine === '                                      ------      ------       -----') {
         inside = false;
     }
-    
 
 }
+iStream.Close();
+iStream = filesys.OpenTextFile(newfile, 8);
+iStream.WriteLine(arrSortPlans)
 
-function skipLine (lines) {
-    for (let i = 1; i <= lines; i++) {
-        objFile.ReadLine();
-    }
-}
-
+iStream.Close();
