@@ -82,19 +82,20 @@ var arrSortPlans = [];
 var inside = false;
 var foundEnd = false;
 while (!iStream.AtEndOfStream) {
-
     var strLine = iStream.ReadLine();
+    
+    if (inside && strLine === '                                      ------      ------       -----') {
+        inside = false;
+    }
+
     if (inside){
         arrSortPlans.push(strLine);
     }
+    
     if (strLine === '                                   Sort Plan') {
         inside = true;
         iStream.SkipLine();
         iStream.SkipLine();
-    }
-
-    if (strLine === '                                      ------      ------       -----') {
-        inside = false;
     }
 
 }
@@ -103,3 +104,7 @@ iStream = filesys.OpenTextFile(newfile, 8);
 iStream.WriteLine(arrSortPlans)
 
 iStream.Close();
+
+for (i=0;i<arrSortPlans.length;i++){
+
+}
