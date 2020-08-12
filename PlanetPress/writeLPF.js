@@ -81,14 +81,18 @@ var iStream = filesys.OpenTextFile(manifestFile, 1);
 var arrSortPlans = [];
 var inside = false;
 var foundEnd = false;
+
+//Sort Plans
 while (!iStream.AtEndOfStream) {
     var strLine = iStream.ReadLine();
-    
+    var newStrLine = ''
     if (inside && strLine === '                                      ------      ------       -----') {
         inside = false;
     }
 
     if (inside){
+        newStrLine = "R,1,2" + strLine.slice(43,45) + ",S," + strLine.slice(57,12).relace(" ", "") + "," + chr(34) + FormatDateTime(Now(),1) + chr(34)
+
         arrSortPlans.push(strLine);
     }
     
